@@ -86,9 +86,9 @@ Capistrano::Configuration.instance(:must_exist).load do
   end
 
   before "hipchat:notify_deploy_started", "hipchat:set_client"
-  before "deploy", "hipchat:trigger_notification"
-  before "deploy:migrations", "hipchat:trigger_notification", "hipchat:configure_for_migrations"
-  before "deploy:update_code", "hipchat:notify_deploy_started"
-  after  "deploy", "hipchat:notify_deploy_finished"
-  after  "deploy:migrations", "hipchat:notify_deploy_finished"
+  #before "deploy", "hipchat:trigger_notification"
+  #before "deploy:migrations", "hipchat:trigger_notification", "hipchat:configure_for_migrations"
+  #before "deploy:update_code", "hipchat:notify_deploy_started"
+  #after  "deploy", "hipchat:notify_deploy_finished"
+  #after  "deploy:migrations", "hipchat:notify_deploy_finished"
 end
